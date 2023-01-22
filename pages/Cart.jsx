@@ -153,7 +153,7 @@ const Cart = () => {
 			</PayPalScriptProvider>
       </div>
        ) : (
-        <button onClick={()=>setOpen(true)} className={styles.button}>CHECKOUT NOW!</button>
+        <button onClick={()=>setOpen(true)} className={styles.button}>CHECKOUT NOW</button>
           ) }
 
         </div>
