@@ -30,6 +30,21 @@ const Add = ({setClose}) => {
 //Set state using previous data
 
     const handleCreate = async ()=>{
+        const data = new FormData();
+        data.append("file", file);
+        data.append("upload_preset", "uploads")
+        try {
+            const uploadRes = await axios.post("https://api.cloudinary.com/v1_1/djdq95efy/image/upload", data)
+            //console.log(uploadRes.data)
+            const {url}= uploadRes.data;
+            const newProduct ={
+                title, desc, prices, extraOptions, img:url,
+            };
+            await axios.post("http://localhost:3000/api/products", newProduct);
+            setClose(true);
+        } catch (err) {
+            console.log(err)
+        }
 
 
     }
@@ -41,7 +56,7 @@ const Add = ({setClose}) => {
         <h1>Add a new Pizza</h1>
         <div className={styles.item}>
             <label className={styles.label}>Choose an Image</label>
-            <input type="file" className={styles.input} onChange={(e)=>setFile(e.target.file[0])}/>
+            <input type="file" className={styles.input} onChange={(e)=>setFile(e.target.files[0])}/>
 
         </div>
 
