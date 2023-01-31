@@ -116,11 +116,11 @@ const index = ({products, orders}) => {
 };
 export const getServerSideProps = async (ctx)=>{
   //Check cookie for the serverside as well.
-    const myCookie = ctx.req?.cookie ||  "";
+    const myCookie = ctx.req?.cookies ||  "";
     if(myCookie.token !== process.env.TOKEN){
       return{
         redirect:{
-          destination:"/admin/Login", 
+          destination:"/admin/login", 
           permanent: false
         },
       };

@@ -5,10 +5,10 @@ import { useState } from 'react';
 const Featured = () => {
     const [index, setIndex] = useState(0);
     const images =[
-        "/img/Featured.jpg",
-        "/img/Featured1.jpg",
-        "/img/Featured2.jpg",
-        "/img/Featured3.jpg",
+        // "/img/Featured.jpg",
+        // "/img/Featured1.jpg",
+        // "/img/Featured2.jpg",
+        "/img/Featured6.png",
         
     ];
 
@@ -31,7 +31,7 @@ const Featured = () => {
             <div className={styles.imgContainer}>
                 {images.map((img, i) =>(
                  <div className={styles.imgContainer} key={i}>
-                 <Image src={img} alt="" fill style={{objectFit:'contain'}} />
+                 <Image src={img} alt="" fill style={{objectFit:'fill'}} />
                </div>
                 ))}
             </div>
