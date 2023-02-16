@@ -1,15 +1,22 @@
 .container {
-    height: calc(100vh - 100px);
-    background-color: #d1411e;
+    /* height: calc(100vh - 100px); */
+    height: 190%;
+    width: 100%;
+    background-color: #ff6803;
     display: flex;
+    box-shadow: 0px 6px 60px 8px rgba(230, 14, 14, 0.28);
+    
   }
   
   .item {
     flex: 1;
     position: relative;
     display: flex;
+    
   }
-  
+  .card:first-child{
+    border-right: 5px solid white;
+  }
   .item:last-child {
     flex: 2;
     padding: 50px;
@@ -22,8 +29,9 @@
   }
   
   .title {
-    font-size: 18px;
-    color: #b7903c;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
   }
   
   .text {
@@ -31,7 +39,7 @@
   }
   
   .motto {
-    color: rgb(211, 211, 211);
+    color: white;
   }
   
   @media screen and (max-width: 480px) {
@@ -53,5 +61,8 @@
   
     .text {
       font-size: 20px;
+    }
+    .card:first-child{
+      border-right: none;
     }
   }

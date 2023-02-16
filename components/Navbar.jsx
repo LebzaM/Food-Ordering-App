@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.item}>
           <div className={styles.callButton}>
-            <Image src="/img/telephone.png" alt="" width="32" height="32" />
+            <Image src="/img/telephone.png" alt="" width="32" height="32" style={{display:'flex', paddingTop:'10px', paddingLeft:'10px'}}/>
           </div>
           <div className={styles.texts}>
             <div className={styles.text}>ORDER NOW!</div>
@@ -19,14 +19,11 @@ const Navbar = () => {
         </div>
         <div className={styles.item}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>Homepage</li>
-            <li className={styles.listItem}>Products</li>
-            <li className={styles.listItem}>Menu</li>
-            <Image src="/img/logo4.png" alt="" width="160" height="69" />
-            <li className={styles.listItem}>Events</li>
-            <li className={styles.listItem}>Blog</li>
-            <li className={styles.listItem}>Contact</li>
-          </ul>
+            
+            {/* <Image src="/img/logo4.png" alt="" width="250" height="80" className={styles.logotop} /> */}
+            <li className={styles.listItem}>Cusso's Pizza</li>
+            
+          </ul> 
         </div>
         <Link href="/Cart" passHref>
         <div className={styles.item}>

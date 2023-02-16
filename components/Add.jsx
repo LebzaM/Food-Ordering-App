@@ -40,7 +40,7 @@ const Add = ({setClose}) => {
             const newProduct ={
                 title, desc, prices, extraOptions, img:url,
             };
-            await axios.post(`api/products`, newProduct);
+            await axios.post("http://localhost:3000/api/products", newProduct);
             setClose(true);
         } catch (err) {
             console.log(err)
