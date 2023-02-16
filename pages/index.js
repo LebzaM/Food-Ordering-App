@@ -12,7 +12,7 @@ import Add from '../components/Add'
 
 
 const inter = Inter({ subsets: ['latin'] })
-axios.defaults.baseURL = process.env.APP_URL
+axios.defaults.baseURL = 'https://cussospizza.vercel.app/'
 export default function Home({pizzaList, admin}) {
   const [close, setClose] = useState(true)
   return (
