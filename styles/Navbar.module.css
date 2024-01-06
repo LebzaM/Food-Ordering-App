@@ -1,5 +1,6 @@
 .container {
     height: 100px;
+    width: 100%;
     padding: 0px 50px;
     background-color: #ff6803;
     display: flex;
@@ -15,13 +16,12 @@
     flex: 1;
     display: flex;
     align-items: center;
+    
   }
   
   
   
-  .item:last-child {
-    justify-content: flex-end;
-  }
+  
   
   .callButton {
     background-color: white;
@@ -32,7 +32,7 @@
   }
   
   .texts {
-    margin-left: 20px;
+    
     color: white;
   }
   
@@ -52,12 +52,15 @@
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
     color: white;
   }
   
   .listItem {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
     font-weight: 500;
     cursor:pointer
   }

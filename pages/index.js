@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Featured from '../components/Featured'
 import PizzaList from '../components/PizzaList'
-import axiosInstance from '../utilities/axiosconfig'
+import axios from 'axios'
 import { useState } from 'react'
 import AddButton from '../components/AddButton'
 import Add from '../components/Add'
@@ -12,7 +12,7 @@ import Add from '../components/Add'
 
 
 const inter = Inter({ subsets: ['latin'] })
-
+axios.defaults.baseURL = "https://cussospizza.vercel.app/"
 export default function Home({pizzaList, admin}) {
   const [close, setClose] = useState(true)
   return (
@@ -43,7 +43,7 @@ export const getServerSideProps = async (ctx) => {
   if(myCookie.token === process.env.TOKEN){
     admin = true;
   }
-  const res= await axiosInstance.get(`/api/products`);
+  const res= await axios.get(`/api/products`);
   return{
     props:{
       pizzaList:res.data,

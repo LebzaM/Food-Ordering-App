@@ -9,21 +9,19 @@ const Navbar = () => {
     return (
       <div className={styles.container}>
         <div className={styles.item}>
-          <div className={styles.callButton}>
-            <Image src="/img/telephone.png" alt="" width="32" height="32" style={{display:'flex', paddingTop:'10px', paddingLeft:'10px'}}/>
-          </div>
+          
           <div className={styles.texts}>
             <div className={styles.text}>ORDER NOW!</div>
             <div className={styles.text}>012 345 678</div>
           </div>
         </div>
         <div className={styles.item}>
-          <ul className={styles.list}>
+          <div className={styles.list}>
             
             {/* <Image src="/img/logo4.png" alt="" width="250" height="80" className={styles.logotop} /> */}
-            <li className={styles.listItem}>Cusso's Pizza</li>
+            <div className={styles.listItem}>Cusso's Pizza</div>
             
-          </ul> 
+          </div> 
         </div>
         <Link href="/Cart" passHref>
         <div className={styles.item}>
