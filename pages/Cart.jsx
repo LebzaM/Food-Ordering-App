@@ -10,7 +10,7 @@ import {
 } from "@paypal/react-paypal-js";
 import useRouter from "next/router";
 import { reset } from "../redux/cartSlice"
-import axiosInstance from "../utilities/axiosconfig";
+import axios from "axios";
 import OrderDetail from "../components/OrderDetail";
 
 
@@ -28,7 +28,7 @@ const Cart = () => {
 
   const createOrder = async (data) =>{
     try{
-      const res = await axiosInstance.post(`/api/orders`, data)
+      const res = await axios.post(`/api/orders`, data)
       res.status === 201 && router.push("/orders/" + res.data._id);
       dispatch(reset());
       //use router to push user to a new page after error

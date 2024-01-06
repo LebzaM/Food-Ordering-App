@@ -1,1 +1,31 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #ffffff;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff60 14px), repeating-linear-gradient(#ffffff55, #d4d4d457);
+  scroll-behavior: smooth;
+}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  --toastify-color-light: #252422;
+  --toastify-color-dark: #252422;
+  --toastify-color-success: #eb5e28;
+  --toastify-color-warning: #dc143c;
+  --toastify-color-transparent: #eb5e28;
+  --toastify-icon-color-success: #eb5e28;
+  --toastify-icon-color-warning: #eb5e28;
+  --toastify-text-color-light: #fff;
+  --toastify-text-color-dark: #fff;
+  --toastify-color-progress-success: #eb5e28; 
+  --toastify-color-progress-warning: #dc143c; 
+
+}

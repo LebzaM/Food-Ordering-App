@@ -1,6 +1,7 @@
 .container {
     /* height: calc(100vh - 100px); */
     height: 190%;
+    position: relative;
     width: 100%;
     background-color: #ff6803;
     display: flex;
