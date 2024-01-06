@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/Add.module.css'
-import axios from 'axios'
+import axiosInstance from '../utilities/axiosconfig'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
@@ -34,13 +34,13 @@ const Add = ({setClose}) => {
         data.append("file", file);
         data.append("upload_preset", "uploads")
         try {
-            const uploadRes = await axios.post("https://api.cloudinary.com/v1_1/djdq95efy/image/upload", data)
+            const uploadRes = await axiosInstance.post("https://api.cloudinary.com/v1_1/djdq95efy/image/upload", data)
             //console.log(uploadRes.data)
             const {url}= uploadRes.data;
             const newProduct ={
                 title, desc, prices, extraOptions, img:url,
             };
-            await axios.post(`/api/products`, newProduct);
+            await axiosInstance.post(`/api/products`, newProduct);
             setClose(true);
         } catch (err) {
             console.log(err)
