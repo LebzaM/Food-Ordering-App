@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <Image src="/img/cussologo.png" fill alt=''/>
+        <Image src="/img/pngwing.com (25).png" fill alt='Footer'/>
 
       </div>
       <div className={styles.item}>
