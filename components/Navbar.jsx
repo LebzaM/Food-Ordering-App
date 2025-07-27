@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className={styles.list}>
             
             {/* <Image src="/img/logo4.png" alt="" width="250" height="80" className={styles.logotop} /> */}
-            <div className={styles.listItem}>Cusso's Pizza</div>
+            
             
           </div> 
         </div>
